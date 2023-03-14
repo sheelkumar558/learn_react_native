@@ -14,5 +14,5 @@ const App = () => {
     </View>
   );
 };
-//hello
+
 export default App;
