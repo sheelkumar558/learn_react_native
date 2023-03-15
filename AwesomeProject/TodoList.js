@@ -10,7 +10,7 @@ import {
 export default function TodoList() {
   const [todos, setTodos] = useState([]);
   const [text, setText] = useState("");
-  //
+
   const addTodo = () => {
     if (text.length > 0) {
       setTodos([...todos, { key: Date.now(), text }]);
@@ -45,7 +45,7 @@ export default function TodoList() {
     </View>
   );
 }
-
+/////////////
 const styles = StyleSheet.create({
   container: {
     flex: 1,
