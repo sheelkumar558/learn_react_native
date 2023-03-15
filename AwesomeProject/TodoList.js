@@ -1,14 +1,20 @@
-import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import React, { useState } from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 
 export default function TodoList() {
   const [todos, setTodos] = useState([]);
-  const [text, setText] = useState('');
-
+  const [text, setText] = useState("");
+  //
   const addTodo = () => {
     if (text.length > 0) {
       setTodos([...todos, { key: Date.now(), text }]);
-      setText('');
+      setText("");
     }
   };
 
@@ -43,29 +49,29 @@ export default function TodoList() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
   form: {
-    flexDirection: 'row',
+    flexDirection: "row",
     margin: 20,
   },
   input: {
     borderWidth: 1,
-    borderColor: '#777',
+    borderColor: "#777",
     padding: 8,
     margin: 5,
     width: 200,
   },
   button: {
-    backgroundColor: '#f7287b',
+    backgroundColor: "#f7287b",
     padding: 10,
     margin: 5,
     borderRadius: 5,
   },
   buttonText: {
-    color: '#fff',
+    color: "#fff",
     fontSize: 16,
   },
   list: {
@@ -73,7 +79,7 @@ const styles = StyleSheet.create({
   },
   todo: {
     borderWidth: 1,
-    borderColor: '#777',
+    borderColor: "#777",
     padding: 10,
     margin: 5,
   },
